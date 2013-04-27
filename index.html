@@ -54,10 +54,10 @@
     <h2>by {{author}} <small class='muted'>{{date publishedAt}}</small></h2>
     <hr />
     <div class="intro">
-      {{intro}}
+      {{markdown intro}}
     </div>
     <div class="below-the-fold">
-      {{extended}}
+      {{markdown extended}}
     </div>
   </script>
 
@@ -72,6 +72,7 @@
   <script src="js/libs/ember-1.0.0-rc.3.js"></script>
   <script src="js/libs/ember-data.js"></script>
   <script src="js/libs/moment.js"></script>
+  <script src="js/libs/showdown.js"></script>
   <script src="js/app.js"></script>
 
 </body>
