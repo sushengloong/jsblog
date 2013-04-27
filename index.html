@@ -15,9 +15,17 @@
         <a class="brand" href="#">JS Blog</a>
         <ul class="nav">
           <li><a href="#">Posts</a></li>
-          <li><a href="#">About</a></li>
+          <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
         </ul>
       </div>
+    </div>
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="about">
+    <div class="about">
+      <p>I love Ember.JS!</p>
     </div>
   </script>
 
