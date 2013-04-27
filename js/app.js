@@ -1,5 +1,41 @@
 App = Ember.Application.create();
 
+App.Store = DS.Store.extend({
+  revision: 12,
+  adapter: 'DS.FixtureAdapter'
+});
+
 App.Router.map(function() {
+  this.resource('posts');
   this.resource('about');
 });
+
+App.PostsRoute = Ember.Route.extend({
+  model: function() {
+    return App.Post.find(); 
+  }
+});
+
+App.Post = DS.Model.extend({
+  title      : DS.attr('string'),
+  author     : DS.attr('string'),
+  intro      : DS.attr('string'),
+  extended   : DS.attr('string'),
+  publishedAt: DS.attr('date')
+});
+
+App.Post.FIXTURES = [{
+  id         : 1,
+  title      : "Hello Ember.JS",
+  author     : "Sheng Loong",
+  publishedAt: new Date('02-02-2013'),
+  intro      : "Ember.JS is a cool JS MVC framework",
+  extended   : "I love using Ember.JS"
+}, {
+  id         : 2,
+  title      : "Hello Rails",
+  author     : "Sheng Loong",
+  publishedAt: new Date('05-04-2013'),
+  intro      : "Rails is a cool Ruby MVC framework",
+  extended   : "I love using Rails"
+}];
