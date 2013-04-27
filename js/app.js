@@ -41,3 +41,7 @@ App.Post.FIXTURES = [{
   intro      : "Rails is a cool Ruby MVC framework",
   extended   : "I love using Rails"
 }];
+
+Ember.Handlebars.registerBoundHelper('date', function(date) {
+  return moment(date).fromNow();
+});
