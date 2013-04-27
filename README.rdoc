@@ -1,0 +1,2 @@
+== Simple Blog Application Built using Ember.JS
+Based on Tom Dale's screencast available at http://emberjs.com/guides/
