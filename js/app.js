@@ -32,14 +32,14 @@ App.Post.FIXTURES = [{
   author     : "Sheng Loong",
   publishedAt: new Date('02-02-2013'),
   intro      : "*Ember.JS* is a cool JS MVC framework",
-  extended   : "I love using *Ember.JS* (http://emberjs.com/)"
+  extended   : "I love using [Ember.JS](http://emberjs.com/)"
 }, {
   id         : 2,
   title      : "Hello Rails",
   author     : "Sheng Loong",
   publishedAt: new Date('05-04-2013'),
   intro      : "*Rails* is a cool Ruby MVC framework",
-  extended   : "I love using [Rails] (http://rubyonrails.org/)"
+  extended   : "I love using [Rails](http://rubyonrails.org/)"
 }];
 
 Ember.Handlebars.registerBoundHelper('date', function(date) {
